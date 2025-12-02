@@ -1,0 +1,107 @@
+<!-- ==================== JOUR 4 ==================== -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jour 4 - SOC QUEST</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="jour1.html">Jour 1</a></li>
+    <li><a href="jour2.html">Jour 2</a></li>
+    <li><a href="jour3.html">Jour 3</a></li>
+    <li><a href="jour4.html" class="active">Jour 4</a></li>
+    <li><a href="conclusion.html">Diplôme</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>JOUR 4</h1>
+  <p class="subtitle">Chasseur de vulnérabilités — De CVE à l’exploitation contrôlée</p>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2 style="color:#ff0066">1. CVE, CVSS, CWE — Le langage des failles</h2>
+    <p>Analogie : les avis de rappel automobile</p>
+    <ul style="font-size:1.6rem;">
+      <li><strong>CVE</strong> → numéro unique (ex : CVE-2021-44228 = Log4Shell)</li>
+      <li><strong>CVSS</strong> → note sur 10 (9.8 = « change tes pneus tout de suite »)</li>
+      <li><strong>CWE</strong> → type de problème (ex : CWE-89 = injection SQL)</li>
+    </ul>
+    <p><strong>Exercice 1</strong> → Trouve le CVSS de EternalBlue (MS17-010) et dis si c’est critique</p>
+    <p style="color:#ff0066"><strong>Livrable :</strong> capture nvd.nist.gov</p>
+  </div>
+
+  <div class="section">
+    <h2 style="color:#8b5cf6">2. OWASP Top 10 — Les 10 fautes qu’on voit partout</h2>
+    <p>Les 10 façons les plus courantes de se faire hacker un site web</p>
+    <ol style="font-size:1.7rem;">
+      <li>Injection (SQL, commande…)</li>
+      <li>Authentification cassée</li>
+      <li>Exposition de données sensibles</li>
+      <li>… jusqu’à 10</li>
+    </ol>
+    <p><strong>Exercice 2</strong> → Pour chaque point, donne un exemple concret vu dans l’actualité</p>
+    <p style="color:#8b5cf6"><strong>Livrable :</strong> tableau complété</p>
+  </div>
+
+  <div class="section">
+    <h2 style="color:#00d4ff">3. OpenVAS / Nessus — Ton scanner médical</h2>
+    <p>Dans la VM Jour 4 → OpenVAS déjà installé</p>
+    <p>On scanne un réseau de 15 machines volontairement pourries</p>
+    <p><strong>Exercice 3</strong> → Lance un scan complet et trie les CVE par score CVSS décroissant</p>
+    <p style="color:#00d4ff"><strong>Livrable :</strong> export PDF du rapport</p>
+  </div>
+
+  <div class="section">
+    <h2 style="color:#00ff9f">4. De la théorie à l’action — Priorisation</h2>
+    <p>Tu as 50 CVE. Tu corriges quoi en premier ?</p>
+    <ul style="font-size:1.7rem;">
+      <li>CVSS ≥ 9.0</li>
+      <li>Exploité dans la nature (logo flamme sur NVD)</li>
+      <li>Accès public (Internet-facing)</li>
+    </ul>
+    <p><strong>Exercice 4</strong> → Dans ton rapport OpenVAS, entoure les 5 CVE à patcher ce soir même</p>
+  </div>
+
+  <div class="section">
+    <h2 style="color:#ff0066">5. Grande finale CTF — « Operation Critical Patch »</h2>
+    <p>15 machines vulnérables (Heartbleed, EternalBlue, Log4Shell, ProxyShell…)</p>
+    <p>Tu as 2 heures chrono :</p>
+    <ol style="font-size:1.8rem;">
+      <li>Scanner tout le réseau</li>
+      <li>Lister toutes les CVE</li>
+      <li>Donner le score CVSS + preuve d’exploitabilité</li>
+      <li>Proposer le correctif exact (KB Windows, version à installer…)</li>
+    </ol>
+    <p style="color:#ff0066"><strong>Livrable final :</strong> ton rapport d’audit complet (PDF) → c’est ton portfolio pour les recruteurs</strong></p>
+  </div>
+
+  <div class="section" style="background:linear-gradient(135deg,#ff0066,#8b5cf6); text-align:center; color:white; padding:5rem;">
+    <h2 style="font-size:4rem;">TU ES MAINTENANT UN ANALYSTE SOC TIER 1</h2>
+    <p style="font-size:2.5rem;">Tu as :</p>
+    <p style="font-size:2rem;">
+      Badge Blue Team Newborn<br>
+      Badge Defender Apprentice<br>
+      Badge SOC Architect Junior<br>
+      Badge Vulnerability Slayer ← gagné aujourd’hui
+    </p>
+    <img src="https://img.shields.io/badge/Badge-Vulnerability Slayer-ff0066?style=for-the-badge&logo=skull-and-crossbones" style="height:120px; margin:2rem;">
+    <p style="font-size:2.5rem; margin-top:3rem;">Ton diplôme personnalisé t’arrive par mail dans 5 minutes.</p>
+    <a href="conclusion.html" style="background:white; color:#0a1f3d; padding:2rem 6rem; border-radius:50px; font-size:3rem; text-decoration:none; font-weight:bold; margin-top:3rem; display:inline-block;">
+      → Voir mon diplôme & prochaines étapes
+    </a>
+  </div>
+
+</div>
+<footer>SOC QUEST 2025 — Tu es prêt à être embauché</footer>
+</body>
+</html>

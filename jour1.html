@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jour 1 - SOC QUEST</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="jour1.html" class="active">Jour 1</a></li>
+    <li><a href="jour2.html">Jour 2</a></li>
+    <li><a href="jour3.html">Jour 3</a></li>
+    <li><a href="jour4.html">Jour 4</a></li>
+    <li><a href="conclusion.html">Diplôme</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>JOUR 1</h1>
+  <p class="subtitle">Les fondamentaux de la sécurité défensive — Tu vas tout comprendre en profondeur</p>
+</header>
+
+<div class="container">
+
+  <!-- SECTION 1 -->
+  <div class="section">
+    <h2 style="color:#00ff9f">1. La triade CIA — Le cœur absolu de la cybersécurité</h2>
+    <p>Tout le métier tourne autour de ces trois piliers. Si un seul tombe → incident.</p>
+    <table style="width:100%; font-size:1.4rem; margin:2rem 0;">
+      <tr><th>Principe</th><th>Analogie du monde réel</th><th>Exemple concret</th></tr>
+      <tr><td><strong>Confidentialité</strong></td><td>Une lettre dans une enveloppe fermée</td><td>Un hacker lit les e-mails de la direction</td></tr>
+      <tr><td><strong>Intégrité</strong></td><td><td>Un chèque bancaire que personne ne peut modifier</td><td>Un ransomware chiffre les fichiers et demande rançon</td></tr>
+      <tr><td><strong>Disponibilité</strong></td><td>La porte d’entrée de ta maison reste toujours ouverte quand tu rentres</td><td>Attaque DDoS qui met le site web hors ligne</td></tr>
+    </table>
+    <p style="font-size:1.6rem; text-align:center; margin-top:2rem;"><strong>Exercice 1</strong> → Classe ces 3 scénarios dans la bonne case CIA (à faire maintenant sur un papier) :<br>
+      a) Vol de la base clients<br>
+      b) Modification des salaires dans la paie<br>
+      c) Site e-commerce inaccessible pendant le Black Friday</p>
+    <p style="color:#00ff9f; font-weight:bold;">Livrable : ton tableau rempli → photo envoyée sur Discord</p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section">
+    <h2 style="color:#8b5cf6">2. AAA — Les 3 serrures de la maison</h2>
+    <p>Analogie parfaite : une boîte de nuit VIP</p>
+    <ul style="font-size:1.5rem;">
+      <li><strong>Authentification</strong> → « C’est bien toi ? » → mot de passe, biométrie, 2FA</li>
+      <li><strong>Autorisation</strong> → « Tu as le droit d’aller où ? » → bracelet VIP, lecteur de badge</li>
+      <li><strong>Accounting (Audit)</strong> → « On garde la trace de tout » → caméras, logs</li>
+    </ul>
+    <p style="font-size:1.6rem;"><strong>Exemple réel</strong> : attaque SolarWinds 2020 → les hackers ont volé un mot de passe administrateur → mauvaise authentification → ils ont eu tous les droits.</p>
+    <p style="font-size:1.6rem;"><strong>Exercice 2</strong> → Trouve dans ta vie quotidienne 3 exemples d’AAA (banque en ligne, Netflix, badge entreprise…)</p>
+    <p style="color:#8b5cf6; font-weight:bold;">Livrable : 3 lignes écrites → postées sur Discord</p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section">
+    <h2 style="color:#00d4ff">3. Red Team / Blue Team / Purple Team</h2>
+    <p>Analogie militaire :</p>
+    <ul style="font-size:1.6rem;">
+      <li><strong>Red Team</strong> → les attaquants éthiques (ils cassent tout pour tester)</li>
+      <li><strong>Blue Team</strong> → les défenseurs (c’est toi pendant ces 4 jours)</li>
+      <li><strong>Purple Team</strong> → Red + Blue qui bossent ensemble (le top du top)</li>
+    </ul>
+    <p style="font-size:1.7rem; text-align:center; margin:2rem 0;">
+      <strong>Phrase à retenir :</strong><br>
+      « Un bon Blue Team doit penser comme un Red Team. »
+    </p>
+    <p><strong>Exercice 3</strong> → Imagine que tu es un hacker. Comment tu ferais pour entrer dans une entreprise sans te faire repérer ? (3 idées max)</p>
+    <p style="color:#00d4ff; font-weight:bold;">Livrable : ton texte de 3 lignes → envoyé en privé au formateur</p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section">
+    <h2 style="color:#00ff9f">4. Les 5 fonctions NIST — Ta checklist à vie</h2>
+    <p>Tu peux tout résumer avec ces 5 verbes :</p>
+    <ol style="font-size:1.7rem;">
+      <li><strong>Identify</strong> → Qu’est-ce que j’ai à protéger ? (serveurs, données clients, etc.)</li>
+      <li><strong>Protect</strong> → Mettre des murs (firewall, antivirus, mots de passe forts)</li>
+      <li><strong>Detect</strong> → Repérer l’attaque (c’est 80 % de ton futur métier)</li>
+      <li><strong>Respond</strong> → Réagir vite (isoler la machine, bloquer l’IP)</li>
+      <li><strong>Recover</strong> → Restaurer et tirer les leçons</li>
+    </ol>
+    <p><strong>Exercice 4</strong> → Associe chaque attaque célèbre à la fonction NIST qui a échoué :<br>
+      • Equifax 2017<br>
+      • Colonial Pipeline 2021<br>
+      • Log4Shell 2021</p>
+    <p style="color:#00ff9f; font-weight:bold;">Livrable : tableau complété → partagé sur Discord</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="section">
+    <h2 style="color:#8b5cf6">5. Les logs — Ton nouveau meilleur ami</h2>
+    <p>Un log = une ligne dans le journal de bord du système.</p>
+    <p>Exemples concrets que tu vas voir en live aujourd’hui :</p>
+    <pre style="background:#000; padding:2rem; border-radius:12px; font-size:1.3rem;">
+# Linux – Échec de connexion SSH
+May 15 10:23:11 server sshd[1234]: Failed password for root from 192.168.1.55
+
+# Windows – Connexion réussie RDP
+Event ID 4624 – An account was successfully logged on
+Subject: User Name: administrateur
+Source Network Address: 192.168.1.55
+    </pre>
+    <p style="font-size:1.7rem;"><strong>Exercice 5</strong> → Dans les 50 lignes de logs que je viens de t’envoyer par mail :</p>
+    <ul style="font-size:1.5rem;">
+      <li>Trouve l’IP de l’attaquant</li>
+      <li>Compte le nombre d’échecs de mot de passe</li>
+      <li>Donne l’heure exacte du succès</li>
+    </ul>
+    <p style="color:#8b5cf6; font-weight:bold;">Livrable : fichier texte avec tes 3 réponses → upload sur le Google Drive partagé</p>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="section">
+    <h2 style="color:#00d4ff">6. Installation de ton lab (10 min max)</h2>
+    <ol style="font-size:1.6rem;">
+      <li>Télécharge VirtualBox → <a href="https://www.virtualbox.org" style="color:#00ff9f;">www.virtualbox.org</a></li>
+      <li>Télécharge la VM du Jour 1 (lien donné en direct) → SOC-Quest-J1.ova (3 Go)</li>
+      <li>Dans VirtualBox → Fichier → Importer → sélectionne le .ova → Importer</li>
+      <li>Démarre la machine → login : <code>analyste</code> / mdp : <code>analyste123</code></li>
+    </ol>
+    <p style="text-align:center; font-size:2rem;"><strong>On va lancer une vraie attaque brute-force ensemble dans 5 minutes.</strong></p>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="section" style="background:#001122; border-left-color:#00ff9f;">
+    <h2 style="color:#00ff9f">7. Mini-challenge live (on le fait tous ensemble)</h2>
+    <p>Objectif : repérer l’attaque dans les logs en temps réel</p>
+    <ol style="font-size:1.6rem;">
+      <li>Je lance l’attaque depuis Kali</li>
+      <li>Tu ouvres Event Viewer sur Windows</li>
+      <li>Tu ouvres /var/log/auth.log sur Linux</li>
+      <li>Tu cries « ALERTE ! » dès que tu vois quelque chose</li>
+    </ol>
+    <p style="color:#00ff9f; font-weight:bold;">Livrable : capture d’écran de ton alerte → postée sur Discord avec #jour1-challenge</p>
+  </div>
+
+  <!-- SECTION 8 – BADGE + SUITE -->
+  <div class="section" style="background:linear-gradient(135deg,#ff0066,#8b5cf6); text-align:center; color:white; padding:4rem;">
+    <h2 style="font-size:3.5rem;">Tu as terminé le Jour 1</h2>
+    <p style="font-size:2rem;">Tu viens de comprendre les bases que 90 % des gens ignorent après 6 mois de boulot.</p>
+    <img src="https://img.shields.io/badge/Badge-Blue Team Newborn-00d4ff?style=for-the-badge&logo=shield" class="badge" style="height:100px;">
+    <p style="font-size:2.2rem; margin-top:3rem;">Demain : on passe aux défenses actives (firewall, IDS, Zero Trust)</p>
+    <a href="jour2.html" style="background:white; color:#0a1f3d; padding:1.8rem 5rem; border-radius:50px; font-size:2.5rem; text-decoration:none; font-weight:bold; margin-top:2rem; display:inline-block;">
+      → Jour 2 : Je défends mon château
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  SOC QUEST 2025 — Analyste SOC Tier 1 — 100 % débutant → 100 % opérationnel
+</footer>
+
+</body>
+</html>

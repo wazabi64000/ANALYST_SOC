@@ -1,0 +1,112 @@
+<!-- ==================== JOUR 3 ==================== -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jour 3 - SOC QUEST</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="jour1.html">Jour 1</a></li>
+    <li><a href="jour2.html">Jour 2</a></li>
+    <li><a href="jour3.html" class="active">Jour 3</a></li>
+    <li><a href="jour4.html">Jour 4</a></li>
+    <li><a href="conclusion.html">Diplôme</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>JOUR 3</h1>
+  <p class="subtitle">Je construis ma tour de contrôle — Architecture SOC & SIEM réel</p>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2 style="color:#00ff9f">1. Qu’est-ce qu’un SOC ? (pas que des écrans bleus)</h2>
+    <p>Analogie : la tour de contrôle d’un aéroport géant</p>
+    <ul style="font-size:1.6rem;">
+      <li>SIEM → le radar principal</li>
+      <li>SOAR → le pilote automatique qui exécute les procédures</li>
+      <li>EDR/NDR → les caméras dans chaque avion</li>
+      <li>Threat Intel → la météo des cybermenaces</li>
+      <li>Playbooks → les checklists d’urgence</li>
+    </ul>
+    <p><strong>Exercice 1</strong> → Classe ces outils dans la bonne case : Wazuh, Splunk, TheHive, MISP, pfSense</p>
+    <p style="color:#00ff9f"><strong>Livrable :</strong> tableau rempli → photo sur Discord</p>
+  </div>
+
+  <div class="section">
+    <h2 style="color:#8b5cf6">2. Les 3 niveaux d’analystes (ta future carrière)</h2>
+    <table style="width:100%; font-size:1.5rem;">
+      <tr><th>Niveau</th><th>Ce qu’il fait</th><th>Salaire France</th></tr>
+      <tr><td>Tier 1</td><td>Surveille, filtre, escalade</td><td>38–48 k€</td></tr>
+      <tr><td>Tier 2</td><td>Enquête, chasse, forensics</td><td>55–75 k€</td></tr>
+      <tr><td>Tier 3 / Threat Hunter</td><td>Crée les détections, reverse malware</td><td>80–120 k€ + primes</td></tr>
+    </table>
+    <p><strong>Exercice 2</strong> → Écris en 3 lignes ce que tu ferais si tu reçois l’alerte « Ransomware détecté sur PC-RH-07 »</p>
+    <p style="color:#8b5cf6"><strong>Livrable :</strong> ton mini-playbook</p>
+  </div>
+
+  <div class="section">
+    <h2 style="color:#00d4ff">3. Wazuh — Ton SIEM gratuit à vie</h2>
+    <p>Dans la VM Jour 3 tu as déjà :</p>
+    <ul style="font-size:1.6rem;">
+      <li>Wazuh Manager (le cerveau)</li>
+      <li>Agents sur Windows + Linux</li>
+      <li>Kibana intégré (interface magnifique)</li>
+    </ul>
+    <p><strong>Exercice 3</strong> → Crée ces 3 règles personnalisées dans Wazuh :</p>
+    <ol style="font-size:1.5rem;">
+      <li>5 échecs login en 2 min → alerte critique</li>
+      <li>Execution de mimikatz → alerte immédiate</li>
+      <li>Connexion sortante vers IP russe → blocage auto</li>
+    </ol>
+    <p style="color:#00d4ff"><strong>Livrable :</strong> 3 captures d’écran des règles</p>
+  </div>
+
+  <div class="section">
+    <h2 style="color:#00ff9f">4. Dashboard de ouf en 10 min</h2>
+    <p>On crée ensemble le dashboard que tu montreras en entretien :</p>
+    <ul style="font-size:1.6rem;">
+      <li>Top 10 IP suspectes</li>
+      <li>Carte du monde des attaques</li>
+      <li>Évolution des alertes par sévérité</li>
+      <li>Alertes en temps réel</li>
+    </ul>
+    <p><strong>Exercice 4</strong> → Personnalise ton dashboard avec ton pseudo en gros</p>
+    <p style="color:#00ff9f"><strong>Livrable :</strong> capture haute qualité</p>
+  </div>
+
+  <div class="section">
+    <h2 style="color:#8b5cf6">5. Challenge architecture — Binôme 60 min</h2>
+    <p>Lien collaboratif draw.io déjà ouvert en direct</p>
+    <p>Mission : dessiner le SOC idéal pour une PME de 300 personnes</p>
+    <ul style="font-size:1.6rem;">
+      <li>Firewall + segmentation</li>
+      <li>Wazuh partout</li>
+      <li>Playbooks ransomware & phishing</li>
+      <li>Backup hors ligne</li>
+    </ul>
+    <p style="color:#8b5cf6"><strong>Livrable :</strong> lien draw.io + présentation 3 min</p>
+  </div>
+
+  <div class="section" style="background:linear-gradient(135deg,#ff0066,#8b5cf6); text-align:center; color:white; padding:4rem;">
+    <h2 style="font-size:3.5rem;">Badge du Jour 3 gagné</h2>
+    <img src="https://img.shields.io/badge/Badge-SOC Architect Junior-00ff9f?style=for-the-badge&logo=shield" style="height:110px;">
+    <p style="font-size:2.3rem; margin-top:2rem;">Tu viens de construire un SOC que beaucoup d’entreprises paieraient 200 k€ à un cabinet.</p>
+    <a href="jour4.html" style="background:white; color:#0a1f3d; padding:2rem 6rem; border-radius:50px; font-size:2.8rem; text-decoration:none; font-weight:bold; margin-top:3rem; display:inline-block;">
+      → Jour 4 : Chasseur de vulnérabilités
+    </a>
+  </div>
+
+</div>
+<footer>SOC QUEST 2025 — 100 % débutant → 100 % opérationnel</footer>
+</body>
+</html>

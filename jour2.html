@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jour 2 - SOC QUEST</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="jour1.html">Jour 1</a></li>
+    <li><a href="jour2.html" class="active">Jour 2</a></li>
+    <li><a href="jour3.html">Jour 3</a></li>
+    <li><a href="jour4.html">Jour 4</a></li>
+    <li><a href="conclusion.html">Diplôme</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>JOUR 2</h1>
+  <p class="subtitle">Je défends mon château — Réseaux, firewall, IDS/IPS, EDR, Zero Trust</p>
+</header>
+
+<div class="container">
+
+  <!-- SECTION 1 -->
+  <div class="section">
+    <h2 style="color:#00ff9f">1. Les réseaux en 10 minutes (même ta grand-mère comprendrait)</h2>
+    <p>Analogie : la poste</p>
+    <ul style="font-size:1.6rem;">
+      <li><strong>Adresse IP</strong> → numéro de maison (ex : 192.168.1.55)</li>
+      <li><strong>Masque de sous-réseau</strong> → le quartier (192.168.1.0/24 = 256 maisons)</li>
+      <li><strong>Port</strong> → sonnette de la maison (port 22 = sonnette SSH, 3389 = sonnette RDP)</li>
+      <li><strong>TCP</strong> → appel téléphonique (on se dit bonjour, au revoir)</li>
+      <li><strong>UDP</strong> → carte postale (on envoie, on espère que ça arrive)</li>
+    </ul>
+    <p style="text-align:center; font-size:1.8rem; margin-top:2rem;"><strong>Exercice 1</strong> → Traduis cette phrase en langage humain :<br>
+    « 192.168.1.55:3389 → 8.8.8.8:53 »</p>
+    <p style="color:#00ff9f; font-weight:bold;">Livrable : 1 phrase sur Discord</p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section">
+    <h2 style="color:#8b5cf6">2. Le firewall — Ton pont-levis</h2>
+    <p>Le firewall = le videur à l’entrée du château. Il regarde chaque personne et décide : passe ou non.</p>
+    <p>Dans notre lab : pfSense (le meilleur firewall gratuit)</p>
+    <p style="font-size:1.6rem;"><strong>Exemple de règle qu’on va créer ensemble</strong> :<br>
+    « Bloque tout le trafic entrant sur le port 3389 (RDP) sauf depuis le 192.168.1.0/24 »</p>
+    <p><strong>Exercice 2</strong> → Écris la règle firewall qui bloque tous les scans Nmap sauf depuis ton poste.</p>
+    <p style="color:#8b5cf6; font-weight:bold;">Livrable : capture d’écran de ta règle pfSense</p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section">
+    <h2 style="color:#00d4ff">3. IDS vs IPS — Le chien de garde qui aboie ou qui mord</h2>
+    <ul style="font-size:1.7rem;">
+      <li><strong>IDS (Intrusion Detection System)</strong> → le chien qui aboie quand il voit un voleur (ex : Snort)</li>
+      <li><strong>IPS (Intrusion Prevention System)</strong> → le chien qui mord directement (bloque l’attaque)</li>
+    </ul>
+    <p>Dans le lab : Snort en mode IDS + IPS</p>
+    <p><strong>Exercice 3</strong> → Je lance un scan Nmap agressif. Tu dois :<br>
+      • Trouver l’alerte Snort<br>
+      • Passer Snort en mode IPS pour bloquer automatiquement</p>
+    <p style="color:#00d4ff; font-weight:bold;">Livrable : 2 captures (avant/après blocage)</p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section">
+    <h2 style="color:#00ff9f">4. EDR — L’antivirus qui a grandi</h2>
+    <p>EDR = Endpoint Detection & Response → il voit tout ce qui se passe sur chaque PC</p>
+    <p>Dans le lab : Wazuh (le meilleur EDR gratuit)</p>
+    <p style="font-size:1.6rem;"><strong>Exemples d’alertes Wazuh qu’on va voir en live</strong> :<br>
+      • « Processus powershell.exe lancé depuis Word »<br>
+      • « Connexion sortante vers un serveur russe »</p>
+    <p><strong>Exercice 4</strong> → Je lance un faux malware. Tu dois isoler la machine en 1 clic depuis Wazuh.</p>
+    <p style="color:#00ff9f; font-weight:bold;">Livrable : vidéo 15 sec de ton isolation</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="section">
+    <h2 style="color:#8b5cf6">5. Zero Trust — « Ne fais confiance à personne »</h2>
+    <p>Avant : « tout ce qui est dans le château est en sécurité » → mort en 2025<br>
+    Aujourd’hui : « personne n’a de droits tant qu’il n’a pas prouvé 10 fois qui il est »</p>
+    <p style="font-size:1.8rem; text-align:center;"><strong>Phrase à graver dans le marbre :</strong><br>
+    « Never Trust, Always Verify »</p>
+    <p><strong>Exercice 5</strong> → Dessine sur un papier le réseau Zero Trust d’une PME de 200 personnes.</p>
+    <p style="color:#8b5cf6; font-weight:bold;">Livrable : photo de ton dessin</p>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="section">
+    <h2 style="color:#00d4ff">6. Installation du lab complet Jour 2 (5 min)</h2>
+    <ol style="font-size:1.6rem;">
+      <li>Télécharge SOC-Quest-J2.ova (4 Go) → lien donné en direct</li>
+      <li>Importe dans VirtualBox</li>
+      <li>Machines présentes :<br>
+        • pfSense (firewall)<br>
+        • Windows 10 victime<br>
+        • Kali Linux attaquant<br>
+        • Wazuh Manager + Agent</li>
+    </ol>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="section" style="background:#001122;">
+    <h2 style="color:#00ff9f">7. Challenge « Castle Under Siege » — 60 min non-stop</h2>
+    <p>10 vagues d’attaques réelles (scan, brute-force, malware, exfiltration)</p>
+    <p>Ton objectif : <strong>0 compromission</strong></p>
+    <ul style="font-size:1.7rem;">
+      <li>Tu configures le firewall</li>
+      <li>Tu actives les règles IPS</li>
+      <li>Tu réponds aux alertes Wazuh</li>
+      <li>Tu bloques les IP malveillantes</li>
+    </ul>
+    <p style="color:#00ff9f; font-weight:bold;">Livrable final : ton score sur 10 + capture du dashboard Wazuh propre</p>
+  </div>
+
+  <!-- SECTION 8 – BADGE -->
+  <div class="section" style="background:linear-gradient(135deg,#ff0066,#8b5cf6); text-align:center; color:white; padding:4rem;">
+    <h2 style="font-size:3.5rem;">Tu as survécu au Jour 2</h2>
+    <p style="font-size:2.2rem;">Tu viens de bloquer des attaques que 95 % des entreprises se prennent en pleine face.</p>
+    <img src="https://img.shields.io/badge/Badge-Defender Apprentice-8b5cf6?style=for-the-badge&logo=shield" class="badge" style="height:100px;">
+    <p style="font-size:2.2rem; margin-top:3rem;">Demain : tu construis ton propre SOC avec un vrai SIEM</p>
+    <a href="jour3.html" style="background:white; color:#0a1f3d; padding:1.8rem 5rem; border-radius:50px; font-size:2.5rem; text-decoration:none; font-weight:bold; margin-top:2rem; display:inline-block;">
+      → Jour 3 : Je construis ma tour de contrôle
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  SOC QUEST 2025 — Analyste SOC Tier 1 — 100 % débutant → 100 % opérationnel
+</footer>
+
+</body>
+</html>
